@@ -3,6 +3,9 @@ import type { Expense } from '../types/expense';
 import { useExpenses } from '../context/ExpenseContext';
 import ExpenseForm from '../components/ExpenseForm/ExpenseForm';
 import ExpenseList from '../components/ExpenseList/ExpenseList';
+import SummaryCards from '../components/Dashboard/SummaryCards';
+import CategoryChart from '../components/Dashboard/CategoryChart';
+import styles from './ExpensesPage.module.css';
 
 export default function ExpensesPage() {
   const { expenses, addExpense, updateExpense, deleteExpense } = useExpenses();
@@ -28,6 +31,11 @@ export default function ExpensesPage() {
 
   return (
     <div>
+      <div className={styles.dashboard}>
+        <SummaryCards expenses={expenses} />
+        <CategoryChart expenses={expenses} />
+      </div>
+
       <h2>Expenses</h2>
       <ExpenseForm
         expense={editingExpense}

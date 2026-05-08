@@ -1,18 +1,17 @@
-import { useState } from 'react';
 import { ExpenseProvider } from './context/ExpenseContext';
-import Header from './components/Layout/Header';
-import DashboardPage from './pages/DashboardPage';
 import ExpensesPage from './pages/ExpensesPage';
 import './App.css';
 
 function App() {
-  const [activeTab, setActiveTab] = useState<'dashboard' | 'expenses'>('dashboard');
-
   return (
     <ExpenseProvider>
       <div className="app">
-        <Header activeTab={activeTab} onTabChange={setActiveTab} />
-        <main>{activeTab === 'dashboard' ? <DashboardPage /> : <ExpensesPage />}</main>
+        <header className="appHeader">
+          <h1>💰 Expense Tracker</h1>
+        </header>
+        <main>
+          <ExpensesPage />
+        </main>
       </div>
     </ExpenseProvider>
   );

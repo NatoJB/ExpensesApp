@@ -18,6 +18,19 @@ body {
   flex-direction: column;
 }
 
+.appHeader {
+  background-color: #1e293b;
+  color: #f8fafc;
+  padding: 1rem 1.5rem;
+  text-align: center;
+}
+
+.appHeader h1 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin: 0;
+}
+
 main {
   flex: 1;
   max-width: 960px;
