@@ -15,4 +15,10 @@ npm install
 npm run dev
 ```
 
+## Workflows
+- `npm run dev` — Start the development server
+- `npm run build` — Build for production
+- `npm run preview` — Preview the production build
+- `npm run lint` — Run ESLint
+
 Open http://localhost:5173 in your browser.
